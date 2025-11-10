@@ -1,0 +1,289 @@
+type: collection.insomnia.rest/5.0
+name: LojaSpricio
+meta:
+  id: wrk_cf7716c83b2e4382980fc7538747dd58
+  created: 1760984644255
+  modified: 1760984644255
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_267915b0134543dba09fa3bcb6ed3182
+      created: 1760355559971
+      modified: 1761584411928
+      sortKey: -1760355559971
+      description: ""
+    children:
+      - url: localhost:8081/produtos
+        name: Select Todos
+        meta:
+          id: req_e896993128024211af1e4600b004dc7b
+          created: 1760355565918
+          modified: 1760985546162
+          isPrivate: false
+          description: ""
+          sortKey: -1760355565918
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Incluir
+        meta:
+          id: req_f7a1c58a7fef47daadb9288bbe91120f
+          created: 1760987243205
+          modified: 1761590254539
+          isPrivate: false
+          description: ""
+          sortKey: -1760355565868
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Rel",
+            	"valor": 50.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/3
+        name: Atualizar
+        meta:
+          id: req_7587014ab01349178e852b1ec303ec33
+          created: 1761569075487
+          modified: 1762194807231
+          isPrivate: false
+          description: ""
+          sortKey: -1760355565843
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "  Cofrinho  ",
+            	"valor": 6.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/5
+        name: Deletar
+        meta:
+          id: req_498421cfaeca428db870543d7e6e9ad7
+          created: 1761581575640
+          modified: 1761583247361
+          isPrivate: false
+          description: ""
+          sortKey: -1760355565768
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/3
+        name: Select por ID
+        meta:
+          id: req_106a1c074e674c06b31e25808c227eb4
+          created: 1762194791582
+          modified: 1762194791582
+          isPrivate: false
+          description: ""
+          sortKey: -1760355565880.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_71d55dbcb20042ec8215b611d52e2005
+      created: 1761584458740
+      modified: 1761584458740
+      sortKey: -1761584458740
+      description: ""
+    children:
+      - url: localhost:8081/clientes
+        name: Select por ID
+        meta:
+          id: req_7b016bc123b641afb0baf441087325a5
+          created: 1761583788025
+          modified: 1762195536689
+          isPrivate: false
+          description: ""
+          sortKey: -1761588358347
+        method: GET
+        parameters:
+          - id: pair_b84810a7d43745edb4d7912b4d5c4456
+            name: idCliente
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes
+        name: Buscar Todos Clientes
+        meta:
+          id: req_0014bb0d1fa649d08267c9aaa1e3e1f3
+          created: 1761586945316
+          modified: 1761587003031
+          isPrivate: false
+          description: ""
+          sortKey: -1761586945316
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes
+        name: Inserir
+        meta:
+          id: req_eae89a0ac092457bacad8d8c2a86efe8
+          created: 1761589771378
+          modified: 1762173444390
+          isPrivate: false
+          description: ""
+          sortKey: -1761589771378
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	 "nome": "Manuela Pereira",
+              "cpf": "13346672903"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes/1
+        name: Update
+        meta:
+          id: req_34d9bda3a3bf4ce2b6600d73fa7c0eb4
+          created: 1762194815589
+          modified: 1762197459684
+          isPrivate: false
+          description: ""
+          sortKey: -1761589064862.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Cofrinho",
+            	"cpf": "12345678911"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/5
+        name: Delete
+        meta:
+          id: req_a1470ad7c2a1417dba1f3ee773f4cc23
+          created: 1762194834932
+          modified: 1762194838168
+          isPrivate: false
+          description: ""
+          sortKey: -1761588711604.75
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9b9d7e0f5631441ab9dbc9a7ef884d57
+    created: 1757329429566
+    modified: 1757329429566
+environments:
+  name: Base Environment
+  meta:
+    id: env_11797174bfd54fc990d5f6a39a5802b6
+    created: 1755519598986
+    modified: 1757329429184
+    isPrivate: false
